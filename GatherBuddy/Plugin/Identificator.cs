@@ -19,10 +19,7 @@ public class Identificator
         _data = GatherBuddy.GameData;
         var languages = new[]
         {
-            GatherBuddy.Language,
-            (ClientLanguage)(((int)GatherBuddy.Language + 1) % 4),
-            (ClientLanguage)(((int)GatherBuddy.Language + 2) % 4),
-            (ClientLanguage)(((int)GatherBuddy.Language + 3) % 4),
+            ClientLanguage.Korean
         };
 
         _gatherableFromLanguage = languages.Select(CreateGatherableDictionary).ToArray();
