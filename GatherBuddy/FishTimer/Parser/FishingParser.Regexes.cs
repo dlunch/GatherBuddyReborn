@@ -64,7 +64,7 @@ public partial class FishingParser
 
         private static readonly Lazy<Regexes> Korean = new(() => new Regexes
         {
-            Cast = new Regex(@".+\u306f(?<FishingSpot>.+)에서 낚시를 시작합니다.", RegexOptions.Compiled | RegexOptions.NonBacktracking | RegexOptions.ExplicitCapture),
+            Cast = new Regex(@".+님이 (?<FishingSpot>.+)에서 낚시를 시작합니다.", RegexOptions.Compiled | RegexOptions.NonBacktracking | RegexOptions.ExplicitCapture),
             AreaDiscovered = new Regex(@"낚시 수첩에 새로운 낚시터 '(?<FishingSpot>.+)'의 정보를 기록했습니다!", RegexOptions.Compiled | RegexOptions.NonBacktracking | RegexOptions.ExplicitCapture),
             Mooch = new Regex(@"조심스럽게 물에 넣고 생미끼 낚시를 시도합니다.", RegexOptions.Compiled | RegexOptions.NonBacktracking | RegexOptions.ExplicitCapture),
             Undiscovered = "미지의 낚시터",
