@@ -51,6 +51,7 @@ public readonly struct MultiString(string en, string de, string fr, string jp)
             ClientLanguage.German   => German,
             ClientLanguage.Japanese => Japanese,
             ClientLanguage.French   => French,
+            (ClientLanguage)5       => English,
             _                       => throw new ArgumentException(),
         };
 
